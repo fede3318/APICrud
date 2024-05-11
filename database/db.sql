@@ -1,5 +1,7 @@
+-- Eliminar la tabla de usuarios si ya existe
 DROP TABLE IF EXISTS users;
 
+-- Crear la tabla de usuarios
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(255) NOT NULL,
@@ -9,6 +11,7 @@ CREATE TABLE users (
     birthday DATE NOT NULL
 );
 
+-- Insertar datos de ejemplo en la tabla de usuarios
 INSERT INTO users (first_name, last_name, email, password, birthday)
 VALUES 
   ('Tomás', 'García', 'tomas@gmail.com', '412lk4124lk', '1996-09-26'),
